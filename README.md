@@ -6,7 +6,7 @@ CanvasJS, as depicted in its [official website](http://canvasjs.com), is a chart
 ## Download
 
 ```
-npm install canvasjs
+npm install canvasjs-dilberd
 ```
 
 ## Getting Started
@@ -17,10 +17,10 @@ The CanvasJS package works by default with CommonJS so you can use it with brows
 
 ```js
 // CommonJS
-var CanvasJS = require('canvasjs');
+var CanvasJS = require('canvasjs-dilberd');
 
 // If you are using ES6, then
-import CanvasJS from 'canvasjs';
+import CanvasJS from 'canvasjs-dilberd';
 ```
 
 It is also possible to use it with AMD loaders as Require.js. If so, you can import it this way:
