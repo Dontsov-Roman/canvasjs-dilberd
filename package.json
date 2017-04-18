@@ -1,0 +1,110 @@
+{
+  "_args": [
+    [
+      "canvasjs-dilberd@^1.8.3",
+      "/home/dilberd/iot/dashboard/client"
+    ],
+    [
+      "canvasjs-dilberd@^1.8.3",
+      "/home/dilberd/iot/dashboard/client"
+    ],
+    [
+      "canvasjs-dilberd@^1.8.3",
+      "/home/dilberd/iot/dashboard/client"
+    ],
+    [
+      "canvasjs-dilberd@^1.8.4",
+      "/home/dilberd/iot/dashboard/client"
+    ]
+  ],
+  "_from": "canvasjs-dilberd@>=1.8.4 <2.0.0",
+  "_id": "canvasjs-dilberd@1.8.4",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/canvasjs-dilberd",
+  "_nodeVersion": "4.2.6",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/canvasjs-dilberd-1.8.4.tgz_1479373980593_0.5911029337439686"
+  },
+  "_npmUser": {
+    "email": "dontsovroman@gmail.com",
+    "name": "dilberd"
+  },
+  "_npmVersion": "3.5.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "canvasjs-dilberd",
+    "raw": "canvasjs-dilberd@^1.8.4",
+    "rawSpec": "^1.8.4",
+    "scope": null,
+    "spec": ">=1.8.4 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_shrinkwrap": null,
+  "_spec": "canvasjs-dilberd@^1.8.4",
+  "_where": "/home/dilberd/iot/dashboard/client",
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015",
+            "stage-1"
+          ]
+        }
+      ]
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/Tsur/canvasjs-dilberd/issues"
+  },
+  "dependencies": {},
+  "description": "CanvasJS charting library",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-stage-1": "^6.1.18",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "ghooks": "^1.0.1",
+    "npm-bump": "0.0.15",
+    "uglify-js": "^2.6.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "166fdf9760cf8e2c40e232e140e9205443a3480d",
+    "tarball": "https://registry.npmjs.org/canvasjs-dilberd/-/canvasjs-dilberd-1.8.4.tgz"
+  },
+  "gitHead": "4f6dbedc63c864f9fa5cdcf40602136a9021e00b",
+  "homepage": "https://github.com/Tsur/canvasjs-dilberd#readme",
+  "license": "CC",
+  "main": "src/main/index.js",
+  "maintainers": [
+    {
+      "name": "dilberd",
+      "email": "dontsovroman@gmail.com"
+    }
+  ],
+  "name": "canvasjs-dilberd",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Dontsov-Roman/canvasjs-dilberd.git"
+  },
+  "scripts": {
+    "build": "browserify ./src/main/index.js -d --s 'CanvasJS' > dist/canvasjs.js && node_modules/uglify-js/bin/uglifyjs --compress --mangle -- dist/canvasjs.js > dist/canvasjs.min.js",
+    "bump": "npm run bump:patch",
+    "bump:major": "npm-bump major origin master",
+    "bump:minor": "npm-bump minor origin master",
+    "bump:patch": "npm-bump patch origin master",
+    "docs": "rm -rf docs/out/$npm_package_version && jsdoc src --configure jsdoc.conf",
+    "lint": "eslint --ext .js src",
+    "plato": "babel -d es5 src && plato -r -d docs/plato -t 'CanvasJS' es5 && rm -rf es5"
+  },
+  "version": "1.8.7"
+}
