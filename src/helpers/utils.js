@@ -713,7 +713,7 @@ var optimizeForHiDPI = true;
 
 var devicePixelRatio = window.devicePixelRatio || 1;
 var backingStoreRatio = 1;
-var devicePixelBackingStoreRatio = optimizeForHiDPI ? devicePixelRatio / backingStoreRatio : 1;
+export var devicePixelBackingStoreRatio = optimizeForHiDPI ? devicePixelRatio / backingStoreRatio : 1;
 
 export function setCanvasSize(canvas, width, height) {
 

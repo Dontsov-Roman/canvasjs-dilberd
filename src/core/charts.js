@@ -1760,7 +1760,7 @@ Chart.prototype.getDataPointAtXY = function (mouseX, mouseY, getClosest) {
 
 	for (var m = 0; m < results.length; m++) {
 
-		if (results[m].dataSeries.type === "line" || results[m].dataSeries.type === "stepLine" || results[m].dataSeries.type === "area" || results[m].dataSeries.type === "stepArea") {
+		if (results[m] && results[m].dataSeries.type === "line" || results[m].dataSeries.type === "stepLine" || results[m].dataSeries.type === "area" || results[m].dataSeries.type === "stepArea") {
 			var markerSize = getProperty("markerSize", results[m].dataPoint, results[m].dataSeries) || 8;
 			if (results[m].distance <= markerSize / 2) {
 				onlyLineAreaTypes = true;
@@ -1771,7 +1771,7 @@ Chart.prototype.getDataPointAtXY = function (mouseX, mouseY, getClosest) {
 
 	for (m = 0; m < results.length; m++) {
 
-		if (onlyLineAreaTypes && results[m].dataSeries.type !== "line" && results[m].dataSeries.type !== "stepLine" && results[m].dataSeries.type !== "area" && results[m].dataSeries.type !== "stepArea")
+		if (onlyLineAreaTypes && results[m] && results[m].dataSeries.type !== "line" && results[m].dataSeries.type !== "stepLine" && results[m].dataSeries.type !== "area" && results[m].dataSeries.type !== "stepArea")
 			continue;
 
 		if (!closestResult) {
