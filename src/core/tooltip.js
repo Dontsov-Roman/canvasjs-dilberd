@@ -217,9 +217,11 @@ ToolTip.prototype._updateToolTip = function (mouseX, mouseY) {
 
 
         entry = dataSeries.getDataPointAtX(x, true);
-        entry.dataSeries = dataSeries;
-        this.currentDataPointIndex = entry.index;
-        dataPoint = entry.dataPoint;
+        if(entry){
+            entry.dataSeries = dataSeries;
+            this.currentDataPointIndex = entry.index;
+            dataPoint = entry.dataPoint;
+        }
       } else {
         //this.hide();
         return;
