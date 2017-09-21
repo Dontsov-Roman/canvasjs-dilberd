@@ -106,5 +106,5 @@
     "lint": "eslint --ext .js src",
     "plato": "babel -d es5 src && plato -r -d docs/plato -t 'CanvasJS' es5 && rm -rf es5"
   },
-  "version": "1.8.9"
+  "version": "1.8.10"
 }

@@ -227,7 +227,7 @@ ToolTip.prototype._updateToolTip = function (mouseX, mouseY) {
         return;
       }
 
-      if (entry.dataPoint.y !== null) {
+      if (entry && entry.dataPoint && entry.dataPoint.y !== null) {
         if (entry.dataSeries.axisY) {
           if (entry.dataPoint.y.length > 0) {
             var unboundToViewport = 0;
